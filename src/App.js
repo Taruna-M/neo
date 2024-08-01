@@ -41,7 +41,7 @@ function App() {
         setLoading(false);
         return;
       }
-      axios.post('http://localhost:8000/predict', { 
+      axios.post('https://neo-api-wm2r.onrender.com/predict', { 
         ID: id,
         dataManual: null})
         .then((res) => {
@@ -90,7 +90,7 @@ function App() {
         parseFloat(manualInput.relativeVelocity),
         parseFloat(manualInput.missDistance)
       ]
-      axios.post('http://localhost:8000/predict', {
+      axios.post('https://neo-api-wm2r.onrender.com/predict', {
         ID: null,
         dataManual: manualInputArray})
         .then((res) => {
