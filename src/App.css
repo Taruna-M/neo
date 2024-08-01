@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+/* src/components/GalaxyBackground.css */
+.galaxy-background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(120deg, #000428, #004e92);
+  animation: gradient 15s ease infinite;
+  z-index: -1; /* Ensure it’s behind other content */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes gradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.manualMode{
+  width: 500px;
 }
